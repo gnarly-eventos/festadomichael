@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ingressos · Festa do Michael Jackson</title>
+<meta name="description" content="Ingressos da Festa do Michael Jackson por todo o Brasil.">
+<meta name="theme-color" content="#14082a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ingressos · Festa do Michael Jackson">
+<meta property="og:description" content="Escolha sua cidade e garanta seu ingresso.">
+<meta property="og:image" content="https://gnarly-eventos.github.io/festadomichael/og.jpg">
+<meta property="og:url" content="https://gnarly-eventos.github.io/festadomichael/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 9' shape-rendering='crispEdges'%3E%3Crect width='9' height='9' fill='%23ff2a1a'/%3E%3Crect x='1' y='1' width='7' height='7' fill='%23ffe100'/%3E%3Crect x='3' y='3' width='3' height='3' fill='%23ff2a1a'/%3E%3C/svg%3E">
+<!-- Google tag (Analytics G-437SS7TQKQ) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W2X5PHGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-437SS7TQKQ');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Russo+One&family=Nunito:wght@400;600;800&display=swap">
+<style>
+/* Fliperama anos 80: sol listrado + piso quadriculado ao fundo, uma coluna central com HUD, painel de botões e tela CRT */
+:root{
+  --noite:#14082a;      /* céu */
+  --noite-2:#2a0f4a;
+  --tela:#0b0618;       /* fundo da tela CRT */
+  --vermelho:#ff2a1a;   /* do logo */
+  --laranja:#ff7a00;
+  --amarelo:#ffe100;
+  --rosa:#ff2e88;
+  --ciano:#25e0ff;
+  --verde:#39ff6a;
+  --roxo:#9b5cff;
+  --texto:#fff6e6;
+  --texto-2:#c9b8e8;
+  --linha:#3c2266;
+  --f-pixel:"Press Start 2P",ui-monospace,"Courier New",monospace;
+  --f-titulo:"Russo One","Arial Black",Impact,sans-serif;
+  --f-texto:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{min-height:100%}
+body{margin:0;background:var(--noite);color:var(--texto);font-family:var(--f-texto);font-size:15px;line-height:1.45;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px}
+
+/* ---------- Fundo ---------- */
+.fundo{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;
+  background:linear-gradient(180deg,var(--noite) 0%,var(--noite-2) 46%,#4a1240 60%,var(--noite) 61%)}
+.estrelas{position:absolute;inset:0 0 40% 0}
+.estrelas i{position:absolute;width:3px;height:3px;background:#fff;opacity:.8;animation:pisca 2.4s steps(2) infinite}
+.sol{position:absolute;left:50%;top:60%;width:min(78vw,440px);aspect-ratio:1;transform:translate(-50%,-62%);border-radius:50%;
+  background:linear-gradient(180deg,var(--amarelo) 0%,var(--laranja) 45%,var(--vermelho) 75%,var(--rosa) 100%);
+  -webkit-mask:linear-gradient(180deg,#000 0 46%,transparent 46% 50%,#000 50% 60%,transparent 60% 65%,#000 65% 73%,transparent 73% 79%,#000 79% 85%,transparent 85% 92%,#000 92%);
+          mask:linear-gradient(180deg,#000 0 46%,transparent 46% 50%,#000 50% 60%,transparent 60% 65%,#000 65% 73%,transparent 73% 79%,#000 79% 85%,transparent 85% 92%,#000 92%);
+  filter:drop-shadow(0 0 40px rgba(255,90,40,.55))}
+.piso{position:absolute;left:-50%;right:-50%;top:61%;bottom:-10%;transform-origin:top;transform:perspective(300px) rotateX(62deg);
+  background-image:linear-gradient(var(--rosa) 2px,transparent 2px),linear-gradient(90deg,var(--rosa) 2px,transparent 2px);
+  background-size:56px 56px;animation:anda 1.6s linear infinite;opacity:.75;
+  -webkit-mask:linear-gradient(180deg,transparent,#000 30%);mask:linear-gradient(180deg,transparent,#000 30%)}
+.horizonte{position:absolute;left:0;right:0;top:61%;height:2px;background:var(--rosa);box-shadow:0 0 18px 4px var(--rosa)}
+.scan{position:fixed;inset:0;z-index:50;pointer-events:none;background:repeating-linear-gradient(180deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+@keyframes anda{to{background-position:0 56px}}
+@keyframes pisca{50%{opacity:.15}}
+
+/* ---------- Intro ---------- */
+.intro{position:fixed;inset:0;z-index:20;display:grid;place-items:center;text-align:center;
+  padding-block:24px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));cursor:pointer}
+.intro-miolo{display:grid;justify-items:center;gap:22px;width:min(100%,520px);transform:translateY(-6vh)}
+.intro img{width:min(92%,460px);height:auto;filter:drop-shadow(0 6px 0 #000) drop-shadow(0 0 24px rgba(255,120,0,.45));animation:entra .7s cubic-bezier(.2,1.4,.4,1) both}
+.aperte{font-family:var(--f-pixel);font-size:clamp(14px,4.2vw,20px);color:var(--amarelo);text-shadow:3px 3px 0 var(--vermelho);animation:pisca 1s steps(2) infinite;letter-spacing:.04em}
+.fichas{font-family:var(--f-pixel);font-size:10px;color:var(--ciano);letter-spacing:.08em}
+.btn-start{border:0;cursor:pointer;width:96px;height:96px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#ff8a7a,var(--vermelho) 45%,#a80d05 100%);
+  box-shadow:0 8px 0 #5c0702,0 10px 18px rgba(0,0,0,.6),inset 0 -6px 0 rgba(0,0,0,.25);
+  font-family:var(--f-pixel);font-size:11px;color:#fff;text-shadow:2px 2px 0 #5c0702;transition:transform .08s,box-shadow .08s}
+.btn-start:active{transform:translateY(6px);box-shadow:0 2px 0 #5c0702,0 3px 8px rgba(0,0,0,.6),inset 0 -6px 0 rgba(0,0,0,.25)}
+.intro.saindo{animation:desliga .45s ease-in forwards}
+@keyframes entra{from{transform:scale(.4) rotate(-6deg);opacity:0}}
+@keyframes desliga{60%{transform:scaleY(.02);filter:brightness(3)}100%{transform:scaleY(0) scaleX(0);opacity:0}}
+
+/* ---------- Jogo ---------- */
+.jogo{position:relative;z-index:5;width:min(100%,600px);margin:0 auto;
+  padding-block:0 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;gap:18px}
+.jogo.liga{animation:liga .5s ease-out}
+@keyframes liga{0%{transform:scaleY(.02);filter:brightness(4)}60%{transform:scaleY(1.02)}100%{transform:none}}
+.hud{position:sticky;top:env(safe-area-inset-top,0px);z-index:8;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:12px max(16px,env(safe-area-inset-left,0px));
+  background:rgba(11,6,24,.86);backdrop-filter:blur(6px);border-bottom:2px solid var(--linha);
+  font-family:var(--f-pixel);font-size:10px;letter-spacing:.06em}
+.hud b{color:var(--amarelo);font-weight:400}
+.hud .up{color:var(--vermelho);animation:pisca 1.2s steps(2) infinite}
+.hud .datas{color:var(--ciano)}
+.topo{display:grid;justify-items:center;padding-top:6px}
+.topo img{width:min(84%,380px);height:auto;filter:drop-shadow(0 5px 0 #000) drop-shadow(0 0 18px rgba(255,120,0,.4))}
+
+/* Painel de botões */
+.painel{background:linear-gradient(180deg,#24104a,#170a33);border:3px solid #000;border-radius:16px;padding:16px 10px 12px;
+  box-shadow:0 0 0 3px var(--linha),0 12px 0 #0a0516;position:relative}
+.painel::before{content:"";position:absolute;left:12px;right:12px;top:-3px;height:6px;border-radius:0 0 4px 4px;
+  background:linear-gradient(90deg,var(--vermelho) 0 25%,var(--laranja) 25% 50%,var(--amarelo) 50% 75%,var(--rosa) 75%)}
+.botoes{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 6px;margin:0;padding:0;list-style:none}
+.botoes li{width:calc(25% - 5px);min-width:64px;display:flex;justify-content:center}
+.bt{display:grid;justify-items:center;gap:8px;text-decoration:none;cursor:pointer;background:none;border:0;padding:0;width:100%}
+.bt .bola{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 28%,color-mix(in srgb,var(--c) 45%,#fff),var(--c) 50%,color-mix(in srgb,var(--c) 55%,#000) 100%);
+  box-shadow:0 6px 0 color-mix(in srgb,var(--c) 40%,#000),0 8px 12px rgba(0,0,0,.55),inset 0 -5px 0 rgba(0,0,0,.2);transition:transform .08s,box-shadow .08s}
+.bt .bola svg{width:26px;height:auto;image-rendering:pixelated}
+.bt span{font-family:var(--f-pixel);font-size:8px;line-height:1.5;text-align:center;color:var(--texto-2);letter-spacing:.03em}
+.bt:active .bola,.bt[aria-current="true"] .bola{transform:translateY(5px);box-shadow:0 1px 0 color-mix(in srgb,var(--c) 40%,#000),0 2px 6px rgba(0,0,0,.55),inset 0 -5px 0 rgba(0,0,0,.2)}
+.bt[aria-current="true"] span{color:var(--amarelo)}
+
+/* Tela CRT */
+.tela{background:var(--tela);border:3px solid #000;border-radius:18px;box-shadow:0 0 0 6px #2b1a45,0 0 0 9px #000,0 0 40px rgba(155,92,255,.35);overflow:hidden;position:relative}
+.tela::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:16px;box-shadow:inset 0 0 60px rgba(0,0,0,.8)}
+.tela-barra{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:2px dashed var(--linha);font-family:var(--f-pixel);font-size:11px;color:var(--amarelo);letter-spacing:.06em}
+.tela-barra small{font-size:8px;color:var(--texto-2)}
+.tela-corpo{padding:16px;display:grid;gap:12px;position:relative;z-index:1}
+.vazio{font-family:var(--f-pixel);font-size:10px;line-height:1.8;color:var(--texto-2);text-align:center;padding:24px 8px}
+
+/* Ingressos */
+.evento{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:12px;border:2px solid var(--linha);border-radius:10px;background:linear-gradient(180deg,rgba(155,92,255,.08),transparent)}
+.data{display:grid;justify-items:center;align-content:center;gap:5px;background:#000;border:2px solid var(--amarelo);border-radius:6px;padding:8px 4px;box-shadow:3px 3px 0 var(--vermelho)}
+.data .dia{font-family:var(--f-pixel);font-size:18px;color:var(--amarelo)}
+.data .mes{font-family:var(--f-pixel);font-size:9px;color:var(--texto)}
+.data .sem{font-family:var(--f-pixel);font-size:7px;color:var(--ciano)}
+.ev-info{min-width:0;display:grid;gap:4px;align-content:start}
+.ev-topo{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.cidade{font-family:var(--f-titulo);font-size:21px;line-height:1.1;margin:0;text-wrap:balance}
+.selo{font-family:var(--f-pixel);font-size:7px;letter-spacing:.06em;padding:5px 6px 4px;border-radius:3px;color:#000;background:var(--rosa);box-shadow:2px 2px 0 #000}
+.selo.ultimos{background:var(--amarelo)}
+.selo.esgotado{background:#8a8396;color:#fff}
+.sub{font-weight:800;color:var(--laranja);font-size:13px}
+.onde{color:var(--texto-2);font-size:13px}
+.comprar{justify-self:start;margin-top:6px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--f-pixel);font-size:10px;color:#fff;
+  background:var(--vermelho);padding:11px 14px 10px;border-radius:6px;box-shadow:0 4px 0 #7a0a03;transition:transform .08s,box-shadow .08s}
+.comprar:active{transform:translateY(3px);box-shadow:0 1px 0 #7a0a03}
+.comprar.off{background:#4b4358;box-shadow:0 4px 0 #241f2c;pointer-events:none}
+
+/* Fale conosco */
+.balao{background:#1d1238;border:2px solid var(--linha);border-radius:12px 12px 12px 2px;padding:12px 14px;max-width:92%;font-size:15px}
+.balao p{margin:0}.balao p+p{margin-top:8px}
+.num{font-weight:800;color:var(--verde);user-select:all}
+.acoes{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;text-decoration:none;font-family:var(--f-pixel);font-size:10px;line-height:1.4;padding:12px 14px 11px;border-radius:6px;color:#000;background:var(--c,var(--amarelo));box-shadow:0 4px 0 color-mix(in srgb,var(--c,var(--amarelo)) 45%,#000);transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 color-mix(in srgb,var(--c,var(--amarelo)) 45%,#000)}
+.form-msg{display:flex;gap:8px}
+.form-msg input{flex:1;min-width:0;background:#000;border:2px solid var(--linha);border-radius:6px;color:var(--texto);font:inherit;font-size:16px;padding:10px 12px}
+.form-msg input::placeholder{color:#7d6f99}
+
+/* Playlist */
+.fita{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:center;padding:12px;border:2px solid var(--linha);border-radius:10px}
+.fita svg{width:92px;height:auto}
+.fita h3{font-family:var(--f-titulo);font-size:19px;margin:0 0 4px;font-weight:400}
+.fita p{margin:0 0 10px;color:var(--texto-2);font-size:13px}
+.pendente{font-family:var(--f-pixel);font-size:7px;color:var(--amarelo);border:1px dashed var(--amarelo);padding:5px 6px 4px;border-radius:3px;display:inline-block;margin-left:6px;vertical-align:middle}
+
+/* Fotos */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.grade button{border:0;padding:0;cursor:pointer;background:#000;border-radius:6px;overflow:hidden;aspect-ratio:3/4;max-width:100%}
+.grade img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
+.grade button:hover img{transform:scale(1.05)}
+.visor{position:fixed;inset:0;z-index:60;background:rgba(5,2,12,.95);display:grid;grid-template-rows:auto 1fr auto;
+  padding:calc(12px + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));touch-action:pan-y}
+.visor-topo{display:flex;justify-content:space-between;align-items:center;font-family:var(--f-pixel);font-size:10px;color:var(--amarelo)}
+.visor-img{display:grid;place-items:center;min-height:0;padding-block:12px}
+.visor-img img{max-height:100%;max-width:100%;object-fit:contain;border:3px solid #000;box-shadow:0 0 0 3px var(--linha)}
+.visor-nav{display:flex;justify-content:center;gap:16px}
+.x{background:none;border:2px solid var(--linha);border-radius:6px;color:var(--texto);font-family:var(--f-pixel);font-size:10px;padding:9px 10px 8px;cursor:pointer}
+
+.idade{margin:0;font-size:13px;line-height:1.6;color:var(--texto-2)}
+.idade b{display:block;font-family:var(--f-pixel);font-weight:400;font-size:10px;color:var(--texto);letter-spacing:.06em;margin-bottom:4px}
+.rod-18{color:var(--amarelo)}
+.rod-doc{font-family:var(--f-texto);font-size:13px;letter-spacing:0;color:var(--texto-2)}
+.rodape{text-align:center;font-family:var(--f-pixel);font-size:8px;color:#7d6f99;letter-spacing:.06em;line-height:1.8}
+
+@media (max-width:380px){.bt .bola{width:50px;height:50px}.cidade{font-size:19px}.evento{grid-template-columns:58px 1fr}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="fundo" aria-hidden="true">
+  <div class="estrelas" id="estrelas"></div>
+  <div class="sol"></div>
+  <div class="horizonte"></div>
+  <div class="piso"></div>
+</div>
+<div class="scan" aria-hidden="true"></div>
+
+<section class="intro" id="intro" aria-label="Início">
+  <div class="intro-miolo">
+    <img src="logo-michael.webp" alt="Festa do Michael Jackson" width="720" height="354">
+    <div class="aperte">APERTE START</div>
+    <button class="btn-start" id="start" type="button">START</button>
+    <div class="fichas" id="fichas">&nbsp;</div>
+    <p class="idade"><b>PARA MAIORES DE 18 ANOS</b>Obrigatório apresentação de documento original com foto</p>
+  </div>
+</section>
+
+<main class="jogo" id="jogo" hidden>
+  <header class="hud">
+    <span><span class="up">1UP</span> <b>FESTA DO MICHAEL</b></span>
+    <span class="datas" id="hud-datas"></span>
+  </header>
+
+  <div class="topo"><img src="logo-michael.webp" alt="Festa do Michael Jackson" width="720" height="354"></div>
+
+  <nav class="painel" aria-label="Menu">
+    <ul class="botoes" id="botoes"></ul>
+  </nav>
+
+  <section class="tela" aria-live="polite">
+    <div class="tela-barra"><span id="tela-titulo">INGRESSOS</span><small id="tela-info"></small></div>
+    <div class="tela-corpo" id="tela"></div>
+  </section>
+
+  <footer class="rodape"><span class="rod-18">PARA MAIORES DE 18 ANOS</span><br><span class="rod-doc">Obrigatório apresentação de documento original com foto</span></footer>
+</main>
+
+<div class="visor" id="visor" hidden role="dialog" aria-modal="true" aria-label="Foto">
+  <div class="visor-topo"><span id="visor-n">1/9</span><button class="x" id="visor-fechar" type="button">FECHAR</button></div>
+  <div class="visor-img"><img id="visor-img" alt=""></div>
+  <div class="visor-nav"><button class="x" id="visor-ant" type="button">&lt; ANTERIOR</button><button class="x" id="visor-prox" type="button">PRÓXIMA &gt;</button></div>
+</div>
+
+<script id="previa" type="application/json">[]</script>
+<script>
+(function(){
+"use strict";
+var WHATS="5511957293333", WHATS_TXT="(11) 95729-3333";
+var LINKS={
+  sympla:"",                                           /* sem página do produtor: a conta 1 tem outros eventos */
+  grupo:"https://chat.whatsapp.com/BpUsRfQQPZaKUlUPTiAaH0",
+  instagram:"https://www.instagram.com/festadomichael/",
+  tiktok:"https://www.tiktok.com/@festadomichael",
+  spotify:"https://open.spotify.com/playlist/19XXRSAqj86MC5VbTUj37E",
+  album:"https://www.facebook.com/irregularsp/photos/"
+};
+function src(p){return (window.ASSET&&window.ASSET[p])||p}
+var FOTOS=["01","02","03","04","05","06","07","08","09"];
+
+/* Ícones em pixel (desenhados aqui, sem marcas) */
+var PX={
+  ingressos:["#########","#.......#","..#####..","..#####..","#.......#","#########"],
+  fale:[".#######.","#.......#","#.#.#.#.#","#.......#",".#######.","..##.....",".#......."],
+  playlist:["..#####","..#...#","..#...#","..#...#","###.###","###.###"],
+  fotos:["#########","#.......#","#.....#.#","#..#....#","#.###.#.#","#.#####.#","#########"],
+  grupo:["..#...#..",".###.###.","..#...#..",".........",".###.###.","#########"],
+  instagram:["...###...","#########","#..###..#","#.#...#.#","#.#...#.#","#..###..#","#########"],
+  tiktok:["#########","#..#....#","#..##...#","#..###..#","#..##...#","#..#....#","#########"]
+};
+function pix(nome){
+  var m=PX[nome],h=m.length,w=m[0].length,r="";
+  for(var y=0;y<h;y++)for(var x=0;x<w;x++)if(m[y][x]==="#")r+='<rect x="'+x+'" y="'+y+'" width="1.02" height="1.02"/>';
+  return '<svg viewBox="0 0 '+w+' '+h+'" fill="#fff" shape-rendering="crispEdges" aria-hidden="true">'+r+'</svg>';
+}
+
+var BOTOES=[
+  {id:"ingressos",rot:"Ingressos",c:"var(--vermelho)",tela:true},
+  {id:"fale",rot:"Fale conosco",c:"var(--amarelo)",tela:true},
+  {id:"playlist",rot:"Playlist",c:"var(--ciano)",tela:true},
+  {id:"fotos",rot:"Fotos",c:"var(--rosa)",tela:true},
+  {id:"grupo",rot:"Grupo no WhatsApp",c:"var(--verde)",href:LINKS.grupo},
+  {id:"instagram",rot:"Instagram",c:"var(--roxo)",href:LINKS.instagram},
+  {id:"tiktok",rot:"TikTok",c:"var(--laranja)",href:LINKS.tiktok}
+];
+
+var $=function(s){return document.querySelector(s)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+function track(ev,dados){try{dados=dados||{};dados.festa="michael";if(window.gtag)gtag("event",ev,dados)}catch(e){}}
+
+/* estrelas */
+(function(){var e=$("#estrelas"),h="";for(var i=0;i<46;i++){h+='<i style="left:'+(Math.random()*100).toFixed(1)+'%;top:'+(Math.random()*100).toFixed(1)+'%;animation-delay:'+(Math.random()*2.4).toFixed(2)+'s"></i>'}e.innerHTML=h})();
+
+/* ---------- Eventos ---------- */
+var MES=["JAN","FEV","MAR","ABR","MAI","JUN","JUL","AGO","SET","OUT","NOV","DEZ"];
+var SEM=["DOM","SEG","TER","QUA","QUI","SEX","SÁB"];
+var ENDERECO=/(\bR\.|\bRua\b|\bAv\.|\bAvenida\b|\bAlameda\b|\bAl\.|\bRod\.|\bEstrada\b|,\s*\d)/i;
+function titulo(s){ /* "LOVE HAUS CAMPINAS" -> "Love Haus Campinas"; mantém siglas curtas */
+  if(s!==s.toUpperCase())return s;
+  return s.toLowerCase().replace(/(^|\s)(\S)/g,function(m,a,b){return a+b.toUpperCase()}).replace(/\b(Vse|Dom)\b/g,function(m){return m.toUpperCase()});
+}
+function prepara(ev,ajuste){
+  ajuste=ajuste||{};
+  var partes=ev.nome.split(/\s+-\s+/).slice(1).filter(function(p){return !ENDERECO.test(p)});
+  var d=ev.inicio.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
+  var dt=new Date(+d[1],+d[2]-1,+d[3]);
+  var num=parseInt(ev.id.replace(/^s/,""),16);
+  return {
+    id:ev.id,
+    cidade:ev.cidade,
+    sub:ajuste.titulo||partes.join(" · "),
+    local:titulo(ev.local||""),
+    dia:d[3],mes:MES[+d[2]-1],sem:SEM[dt.getDay()],
+    hora:(+d[4])+"h"+(d[5]!=="00"?d[5]:""),
+    estreia:/^\s*estreia/i.test(ev.nome),
+    selo:ajuste.selo||"",
+    fim:new Date(ev.fim).getTime(),
+    url:ev.link||ev.url||("https://www.sympla.com.br/event__"+num)
+  };
+}
+var EVENTOS=[];
+function carrega(){
+  var previa=[];try{previa=JSON.parse($("#previa").textContent)}catch(e){}
+  return Promise.all([
+    fetch("eventos.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).catch(function(){return previa}),
+    fetch("ajustes.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).catch(function(){return {eventos:{}}})
+  ]).then(function(res){
+    var lista=Array.isArray(res[0])?res[0]:(res[0].eventos||[]);
+    var aj=(res[1]&&res[1].eventos)||{};
+    var agora=Date.now();
+    EVENTOS=lista.filter(function(e){return !(aj[e.id]&&aj[e.id].ocultar)})
+      .map(function(e){return prepara(e,aj[e.id])})
+      .filter(function(e){return e.fim>agora})
+      .sort(function(a,b){return a.fim-b.fim});
+    var n=EVENTOS.length,t=n===1?"1 DATA À VENDA":n+" DATAS À VENDA";
+    $("#fichas").textContent=n?t:"NOVAS DATAS EM BREVE";
+    $("#hud-datas").textContent="DATAS "+String(n).padStart(2,"0");
+    if(atual==="ingressos")abre("ingressos",true);
+  });
+}
+
+/* ---------- Telas ---------- */
+var atual="";
+var TELAS={
+  ingressos:function(){
+    $("#tela-info").textContent=EVENTOS.length?EVENTOS.length+(EVENTOS.length===1?" DATA":" DATAS"):"";
+    if(!EVENTOS.length)return '<div class="vazio">NENHUMA DATA À VENDA AGORA.<br>NOVAS CIDADES EM BREVE.</div>';
+    return EVENTOS.map(function(e){
+      var selo=e.selo==="esgotado"?'<span class="selo esgotado">ESGOTADO</span>':e.selo==="ultimos"?'<span class="selo ultimos">ÚLTIMOS</span>':"";
+      if(e.estreia)selo='<span class="selo">ESTREIA</span>'+selo;
+      return '<article class="evento">'+
+        '<div class="data" aria-label="'+e.dia+' '+e.mes+'"><span class="dia">'+e.dia+'</span><span class="mes">'+e.mes+'</span><span class="sem">'+e.sem+'</span></div>'+
+        '<div class="ev-info"><div class="ev-topo"><h3 class="cidade">'+esc(e.cidade)+'</h3>'+selo+'</div>'+
+        (e.sub?'<div class="sub">'+esc(e.sub)+'</div>':'')+
+        '<div class="onde">'+esc(e.local)+(e.local?' · ':'')+e.hora+'</div>'+
+        (e.selo==="esgotado"?'<span class="comprar off">ESGOTADO</span>':'<a class="comprar" href="'+esc(e.url)+'" target="_blank" rel="noopener" data-ev="'+esc(e.cidade)+'">COMPRAR ▸</a>')+
+        '</div></article>';
+    }).join("")+(LINKS.sympla?'<a class="btn" style="--c:var(--ciano);justify-self:center" href="'+LINKS.sympla+'" target="_blank" rel="noopener" id="sympla-geral">VER TUDO NO SYMPLA</a>':'');
+  },
+  fale:function(){
+    $("#tela-info").textContent="ATENDIMENTO";
+    return '<div class="balao"><p>Oi! Nosso atendimento é no WhatsApp <span class="num">'+WHATS_TXT+'</span>. Podemos te transferir?</p><p>Ao mandar mensagem lá, já diga para qual cidade deseja informações. :)</p></div>'+
+      '<div class="acoes"><a class="btn" style="--c:var(--verde)" id="transfere" target="_blank" rel="noopener" href="https://wa.me/'+WHATS+'?text='+encodeURIComponent("Oi! Vim pela página da Festa do Michael.")+'">SIM, ME TRANSFERE</a></div>'+
+      '<form class="form-msg" id="form-msg"><label for="msg" hidden>Mensagem</label><input id="msg" name="msg" placeholder="Ou escreva aqui…" autocomplete="off"><button class="btn" style="--c:var(--amarelo)" type="submit">ENVIAR</button></form>';
+  },
+  playlist:function(){
+    $("#tela-info").textContent="SPOTIFY";
+    var fita='<svg viewBox="0 0 46 30" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="0" width="46" height="30" fill="#000"/><rect x="2" y="2" width="42" height="26" fill="#ff2a1a"/><rect x="2" y="8" width="42" height="3" fill="#ffe100"/><rect x="2" y="11" width="42" height="2" fill="#ff7a00"/><rect x="9" y="15" width="28" height="9" fill="#000"/><rect x="12" y="17" width="5" height="5" fill="#fff6e6"/><rect x="29" y="17" width="5" height="5" fill="#fff6e6"/><rect x="18" y="19" width="10" height="1" fill="#555"/><rect x="14" y="4" width="18" height="2" fill="#fff6e6"/></svg>';
+    return '<div class="fita">'+fita+'<div><h3>Festa do Michael</h3><p>Michael Jackson + hits dos anos 80, 90 e 2000.</p>'+
+      (LINKS.spotify?'<a class="btn" style="--c:var(--verde)" id="ouvir" target="_blank" rel="noopener" href="'+LINKS.spotify+'">OUVIR</a>':'<span class="btn" style="--c:#6b6380;color:#fff">OUVIR</span><span class="pendente">LINK PENDENTE</span>')+
+      '</div></div>';
+  },
+  fotos:function(){
+    $("#tela-info").textContent=FOTOS.length+" FOTOS";
+    return '<a class="btn" style="--c:var(--rosa);justify-self:stretch;font-size:11px;padding-block:16px 15px;color:#fff" id="album" href="'+LINKS.album+'" target="_blank" rel="noopener">ÁLBUM DE FOTOS ▸</a>'+
+      '<div class="grade">'+FOTOS.map(function(f,i){return '<button type="button" data-foto="'+i+'" aria-label="Abrir foto '+(i+1)+'"><img src="'+src("fotos/"+f+"-t.webp")+'" alt="" loading="lazy" width="360" height="480"></button>'}).join("")+'</div>';
+  }
+};
+var NOMES={ingressos:"INGRESSOS",fale:"FALE CONOSCO",playlist:"PLAYLIST",fotos:"FOTOS"};
+
+function abre(id,quieto){
+  atual=id;
+  $("#tela-titulo").textContent=NOMES[id];
+  $("#tela").innerHTML=TELAS[id]();
+  document.querySelectorAll(".bt[data-tela]").forEach(function(b){b.setAttribute("aria-current",b.dataset.tela===id?"true":"false")});
+  if(!quieto)track("abrir_janela",{janela:id});
+}
+
+function montaBotoes(){
+  $("#botoes").innerHTML=BOTOES.filter(function(b){return b.tela||b.href}).map(function(b){
+    var dentro='<span class="bola" style="--c:'+b.c+'">'+pix(b.id)+'</span><span>'+b.rot+'</span>';
+    return '<li>'+(b.tela
+      ?'<button class="bt" type="button" data-tela="'+b.id+'" style="--c:'+b.c+'">'+dentro+'</button>'
+      :'<a class="bt" href="'+b.href+'" target="_blank" rel="noopener" data-rede="'+b.id+'" style="--c:'+b.c+'">'+dentro+'</a>')+'</li>';
+  }).join("");
+}
+
+/* ---------- Visor de fotos ---------- */
+var vi=0;
+function mostraFoto(i){vi=(i+FOTOS.length)%FOTOS.length;$("#visor-img").src=src("fotos/"+FOTOS[vi]+".webp");$("#visor-n").textContent=(vi+1)+"/"+FOTOS.length}
+function abreVisor(i){mostraFoto(i);$("#visor").hidden=false;$("#visor-fechar").focus();track("ver_foto",{foto:i+1})}
+function fechaVisor(){$("#visor").hidden=true}
+$("#visor-fechar").onclick=fechaVisor;
+$("#visor-ant").onclick=function(){mostraFoto(vi-1)};
+$("#visor-prox").onclick=function(){mostraFoto(vi+1)};
+document.addEventListener("keydown",function(e){if($("#visor").hidden)return;if(e.key==="Escape")fechaVisor();if(e.key==="ArrowLeft")mostraFoto(vi-1);if(e.key==="ArrowRight")mostraFoto(vi+1)});
+(function(){var x0=null,v=$("#visor");v.addEventListener("touchstart",function(e){x0=e.touches[0].clientX},{passive:true});v.addEventListener("touchend",function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)mostraFoto(vi+(dx<0?1:-1));x0=null})})();
+
+/* ---------- Cliques ---------- */
+document.addEventListener("click",function(e){
+  var t=e.target.closest("[data-tela],[data-foto],[data-rede],.comprar,#transfere,#album,#ouvir,#sympla-geral");
+  if(!t)return;
+  if(t.dataset.tela)return abre(t.dataset.tela);
+  if(t.dataset.foto)return abreVisor(+t.dataset.foto);
+  if(t.dataset.rede)return track("clique_rede",{rede:t.dataset.rede});
+  if(t.classList.contains("comprar"))return track("clique_ingresso",{cidade:t.dataset.ev});
+  if(t.id==="transfere")return track("clique_whatsapp",{origem:"transfere"});
+  if(t.id==="album")return track("clique_album");
+  if(t.id==="ouvir")return track("clique_playlist");
+  if(t.id==="sympla-geral")return track("clique_sympla_geral");
+});
+document.addEventListener("submit",function(e){
+  if(e.target.id!=="form-msg")return;
+  e.preventDefault();
+  var txt=$("#msg").value.trim()||"Oi! Vim pela página da Festa do Michael.";
+  track("clique_whatsapp",{origem:"mensagem"});
+  var a=document.createElement("a");a.href="https://wa.me/"+WHATS+"?text="+encodeURIComponent(txt);a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove();
+});
+
+/* ---------- Início ---------- */
+function comeca(){
+  var intro=$("#intro");
+  if(intro.hidden)return;
+  intro.classList.add("saindo");
+  setTimeout(function(){intro.hidden=true;var j=$("#jogo");j.hidden=false;j.classList.add("liga");window.scrollTo(0,0)},
+    matchMedia("(prefers-reduced-motion: reduce)").matches?0:420);
+  track("abrir_festa");
+}
+$("#intro").addEventListener("click",comeca);
+document.addEventListener("keydown",function(e){if(!$("#intro").hidden&&(e.key==="Enter"||e.key===" ")){e.preventDefault();comeca()}});
+
+montaBotoes();
+abre("ingressos",true);
+carrega();
+if(/^#(ingressos|fale|playlist|fotos)$/.test(location.hash)){$("#intro").hidden=true;$("#jogo").hidden=false;abre(location.hash.slice(1),true)}
+})();
+</script>
+</body>
+</html>

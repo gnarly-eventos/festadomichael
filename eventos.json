@@ -1,0 +1,72 @@
+{
+ "atualizado_em": "2026-11-09T22:50:00-03:00",
+ "fonte": "snapshot inicial",
+ "eventos": [
+  {
+   "id": "s369dc4",
+   "nome": "Festa do Michael Jackson em Curitiba - Sexta-feira 13 - R. Mateus Leme, 1719 (VSE Entretenimento)",
+   "inicio": "2026-11-13T23:00:00-03:00",
+   "fim": "2026-11-14T05:00:00-03:00",
+   "cidade": "Curitiba",
+   "local": "VSE ENTRETENIMENTO",
+   "publicado": true,
+   "cancelado": false,
+   "link": ""
+  },
+  {
+   "id": "s36b141",
+   "nome": "Festa do Michael Jackson em Belo Horizonte - DOM: Avenida Barbacena, 33",
+   "inicio": "2026-11-20T23:00:00-03:00",
+   "fim": "2026-11-21T05:00:00-03:00",
+   "cidade": "Belo Horizonte",
+   "local": "DOM Multieventos",
+   "publicado": true,
+   "cancelado": false,
+   "link": ""
+  },
+  {
+   "id": "s373835",
+   "nome": "ESTREIA: Festa do Michael Jackson em CAMPINAS - Rua Oriente, 425 ",
+   "inicio": "2026-11-21T23:00:00-03:00",
+   "fim": "2026-11-22T05:00:00-03:00",
+   "cidade": "Campinas",
+   "local": "LOVE HAUS CAMPINAS",
+   "publicado": true,
+   "cancelado": false,
+   "link": ""
+  },
+  {
+   "id": "s367f82",
+   "nome": "ESTREIA: Festa do Michael Jackson em Manaus - Av. Pedro Teixeira, 2673 (Augusta Haus)",
+   "inicio": "2026-11-27T23:00:00-03:00",
+   "fim": "2026-11-28T05:00:00-03:00",
+   "cidade": "Manaus",
+   "local": "Augusta Haus",
+   "publicado": true,
+   "cancelado": false,
+   "link": ""
+  },
+  {
+   "id": "s36e6fd",
+   "nome": "Festa do Michael Jackson em Porto Alegre - R. João Alfredo, 483",
+   "inicio": "2026-12-05T23:00:00-03:00",
+   "fim": "2026-12-06T05:00:00-03:00",
+   "cidade": "Porto Alegre",
+   "local": "Nuvem",
+   "publicado": true,
+   "cancelado": false,
+   "link": ""
+  },
+  {
+   "id": "s379aed",
+   "nome": "ESTREIA: Festa do Michael Jackson em Juiz de Fora - Av. Eugênio do Nascimento, 815 (Cultural Bar)",
+   "inicio": "2026-12-26T21:00:00-03:00",
+   "fim": "2026-12-27T04:00:00-03:00",
+   "cidade": "Juiz de Fora",
+   "local": "Cultural Bar",
+   "publicado": true,
+   "cancelado": false,
+   "link": ""
+  }
+ ]
+}
