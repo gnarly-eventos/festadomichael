@@ -9,7 +9,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ingressos · Festa do Michael Jackson">
 <meta property="og:description" content="Escolha sua cidade e garanta seu ingresso.">
-<meta property="og:image" content="https://michael.gnarlyeventos.com.br/og.jpg">
+<meta property="og:image" content="https://michael.gnarlyeventos.com.br/og-couro.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://michael.gnarlyeventos.com.br/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 9' shape-rendering='crispEdges'%3E%3Crect width='9' height='9' fill='%23ff2a1a'/%3E%3Crect x='1' y='1' width='7' height='7' fill='%23ffe100'/%3E%3Crect x='3' y='3' width='3' height='3' fill='%23ff2a1a'/%3E%3C/svg%3E">
@@ -213,13 +215,16 @@ a{color:inherit}
 
 /* ---------- abertura: o zíper abre ---------- */
 .abre{position:fixed;inset:0;z-index:60;overflow:hidden}
-.abre .lado{position:absolute;top:0;bottom:0;width:50.500%;border-radius:0;animation:abre-e .55s cubic-bezier(.6,0,.3,1) .75s forwards}
+.abre .lado{position:absolute;top:0;bottom:0;width:50.500%;border-radius:0;animation:abre-e .55s cubic-bezier(.6,0,.3,1) 1.450s forwards}
 .abre .lado.e{left:0}
 .abre .lado.d{right:0;animation-name:abre-d}
 .abre .lado::after{content:"";position:absolute;top:0;bottom:0;width:7px;background:repeating-linear-gradient(180deg,var(--prata) 0 4px,var(--prata-2) 4px 5px,transparent 5px 9px)}
 .abre .lado.e::after{right:0}
 .abre .lado.d::after{left:0;background-position:0 4.500px}
-.abre .cursor{position:absolute;left:50%;top:-70px;width:26px;height:64px;margin-left:-13px;animation:desce .7s cubic-bezier(.5,0,.4,1) .1s forwards}
+.abre .cursor{position:absolute;left:50%;top:-70px;width:26px;height:64px;margin-left:-13px;z-index:2;animation:desce .7s cubic-bezier(.5,0,.4,1) .8s forwards}
+.abre .logo-a{position:absolute;z-index:1;left:50%;top:42%;width:min(76%,400px);height:auto;translate:-50% -50%;filter:drop-shadow(0 7px 0 rgba(0,0,0,.6));opacity:0;animation:logo-entra .45s cubic-bezier(.3,1.5,.5,1) .08s forwards,logo-sai .35s ease 1.400s forwards}
+@keyframes logo-entra{from{opacity:0;scale:.5}to{opacity:1;scale:1}}
+@keyframes logo-sai{to{opacity:0;scale:1.12}}
 @keyframes desce{to{top:105%}}
 @keyframes abre-e{to{transform:translateX(-102%)}}
 @keyframes abre-d{to{transform:translateX(102%)}}
@@ -294,6 +299,7 @@ a{color:inherit}
 
 <div class="abre" id="abre" hidden>
   <div class="lado e couro"></div><div class="lado d couro"></div>
+  <img class="logo-a" src="logo-michael.webp" alt="">
   <svg class="cursor" viewBox="0 0 26 64" aria-hidden="true"><path d="M4 2h18v14l-5 8H9l-5-8z" fill="url(#prata)" stroke="#3a3a42" stroke-width="2"/><rect x="9" y="22" width="8" height="38" rx="4" fill="url(#prata)" stroke="#3a3a42" stroke-width="2"/><circle cx="13" cy="52" r="2.500" fill="#3a3a42"/></svg>
   <button type="button" id="pular">PULAR</button>
 </div>
@@ -556,7 +562,7 @@ track("abrir_festa");
   if(reduz||atual)return;
   a.hidden=false;var feito=false;
   function fim(){if(feito)return;feito=true;a.hidden=true}
-  a.addEventListener("click",fim);setTimeout(fim,1450);
+  a.addEventListener("click",fim);setTimeout(fim,2150);
 })();
 })();
 </script>
